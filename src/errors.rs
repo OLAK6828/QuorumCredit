@@ -387,7 +387,7 @@ pub fn contract_error_meta(env: &Env, err: ContractError) -> (String, String) {
         ),
         ContractError::NotImplemented => (
             String::from_str(env, "NotImplemented"),
-            String::from_str(env, "This function is not yet implemented."),
+            String::from_str(env, "This entry point is not yet implemented."),
         ),
         _ => (
             String::from_str(env, "UnknownError"),
@@ -874,8 +874,6 @@ EmergencyBypassNotAuthorised = 131,
     // ── Issue #1797: Verification rate limit window ──────────────────────────
     /// Rate-limit refill window is outside the allowed range.
     InvalidRateLimitWindow = 265,
-
-    // ── Issues #2136–#2139: stub entrypoints ─────────────────────────────────
-    /// Function is not yet implemented.
+    /// Entry point is not yet implemented; the feature is scaffolded but not built.
     NotImplemented = 270,
 }
